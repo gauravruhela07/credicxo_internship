@@ -1,0 +1,11 @@
+For solving this classification, initially I used random forest algorithm. But it was taking too long to get trained and also the accuracy was not upto the mark. So I used multi-layer perceptrons which was giving very good results. 
+
+In pre-processing part:
+I used columns from 'f1' till 'f166' and 'molecule_name' as feature vectors. I did label encoding of 'molecule_name' column and the did one hot encoding on top of it. The feature named 'conformation_name' has been dropped because it contained little information for out classfication task. After all this feature rearranging, I did mean normalization on them. The data is then split into 80-20 ratio for train and test set.
+
+Neural Network Model:
+The architecture of deep neural network model has been chosen empirically. The loss and optimizers used were categorical cross entropy and adam, respectively. 
+
+Results:
+The model gave accuracy of around 100 precent on test set.
+Recall, F1-score and precision were also around 100 percent.
